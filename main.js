@@ -1,14 +1,6 @@
 $(document).ready(function() {
-    $('#todo-form').submit(function(event) {
-        event.preventDefault(); // Evita o recarregamento da página ao submeter o formulário
-        var taskName = $('#task-input').val();
-        if (taskName.trim() !== '') {
-            $('#task-list').append('<li>' + taskName + '</li>');
-            $('#task-input').val('');
-        }
-    });
-
-    $(document).on('click', 'li', function() {
-        $(this).toggleClass('completed');
-    });
+    // Aplicar máscaras
+    $('#telefone').mask('(00) 0000-0000');
+    $('#cpf').mask('000.000.000-00', {reverse: true});
+    $('#cep').mask('00000-000');
 });
